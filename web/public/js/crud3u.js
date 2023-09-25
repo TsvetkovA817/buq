@@ -1,10 +1,10 @@
 let gIsRendingTblToHtml = true;
 
 let arrDt = [
-    { fullName: 'Алекс', email: '11@11.11', salary: 'саляр1', city: 'Москва' },
-    { fullName: 'Маша', email: '22@22.22', salary: 'саляр2', city: 'Питер' },
-    { fullName: 'Паша', email: '33@33.33', salary: 'саляр3', city: 'Казань' },
-    { fullName: 'Саша', email: '43@44.44', salary: 'саляр4', city: 'Город' },
+    { fullName: 'Алекс', email: '11@11.11', salary: '', city: '' },
+    { fullName: 'Маша', email: '22@22.22', salary: '', city: '' },
+    { fullName: 'Паша', email: '33@33.33', salary: '', city: '' },
+    { fullName: 'Саша', email: '43@44.44', salary: '', city: '' },
 ];
 
 let arrDtP = [
