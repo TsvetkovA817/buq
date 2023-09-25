@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=10">
+    <!-- <link href="https://myfonts.ru/myfonts?fonts=golos-ui" rel="stylesheet" type="text/css" />
+    <link href="https://myfonts.ru/myfonts?fonts=doloman-pavljenko" rel="stylesheet" type="text/css" /> -->
+    <title>Elder books</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/crud3u.css">
+</head>
+
+<body>
+    <div class="bg_lk">
+    <div class="content_wrapper">
+        <div class="header">
+        </div>
+        <div class="container clearfix">
+            <main class="content">
+                <div class="cart_right_wrap">
+                </div>
+                <div class="lgn_wrap">
+                </div>
+                <div class="fav_right_wrap">
+                </div>    
+                <h2><center>Справочник: Категории</center></h2>
+                <div class="ctgs_page"></div>
+                <div class="lk_usrs_form" id="lk_usrs_form">
+                    <form onsubmit="event.preventDefault();lkUsrsOnFormSubmit();" autocomplete="off">
+                        <div>
+                            <label>Код*</label>
+                            <label class="lk_usrs_validation_error lk_usrs_hide" id="lk_usrs_fullNameValidationError">Обязательно заполнить</label>
+                            <input type="text" name="fullName" id="lk_usrs_fullName" class="lk_usrs_inp">
+                        </div>
+                        <div>
+                            <label>Наименование*</label>
+                            <label class="lk_usrs_validation_error lk_usrs_hide" id="lk_usrs_emailValidationError">Обязательно заполнить</label>
+                            <input type="text" name="email" id="lk_usrs_email" class="lk_usrs_inp">
+                        </div>
+                        <div>
+                            <label>Описание</label>
+                            <input type="text" name="salary" id="lk_usrs_salary" class="lk_usrs_inp">
+                        </div>
+                        <div>
+                            <label>Дата записи</label>
+                            <input type="text" name="city" id="lk_usrs_city" class="lk_usrs_inp">
+                        </div>
+                        <div  class="lk_usrs_form_action_buttons">
+                            <input type="submit" value="Отправить" class="lk_usrs_btn">
+                        </div>
+                    </form>
+            </div>
+    
+            <br/>
+            <div class = "lk_usrs_wrap">
+                    <table class="lk_usrs_tbl" id="lk_usrs_tbl">
+                        <thead class="lk_usrs_tbl_thl">
+                            <tr>
+                                <th>Код</th>
+                                <th>Наименование</th>
+                                <th>Описание</th>
+                                <th>Дата записи</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+            </div>
+            </main>
+        </div>
+        <div class="footer_wrap">
+        </div>
+    </div>
+    </div>
+    <script src="./js/s1.js"  defer> </script>
+</body>
+
+</html>

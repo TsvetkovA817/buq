@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=10">
+    <!-- <link href="https://myfonts.ru/myfonts?fonts=golos-ui" rel="stylesheet" type="text/css" />
+    <link href="https://myfonts.ru/myfonts?fonts=doloman-pavljenko" rel="stylesheet" type="text/css" /> -->
+    <title>Букинист: Настройки</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/crud3u.css">
+</head>
+
+<body>
+    <div class="bg_lk">
+    <div class="content_wrapper">
+        <div class="header">
+        </div>
+        <div class="container clearfix">
+            <main class="content">
+                <div class="cart_right_wrap">
+                </div>
+                <div class="lgn_wrap">
+                </div>
+                <div class="fav_right_wrap">
+                </div>    
+                <h2><center>Настройки сайта</center></h2>
+                <div class="sett_page"></div>
+                <div class="lk_usrs_form" id="t02form1">
+                    <form onsubmit="event.preventDefault();t02OnForm1Submit();" autocomplete="off">
+                        <div>
+                            <label id="t02s1_lbl">Кол-во категорий в рекл блоке (1-5)</label>
+                            <label class="lk_usrs_validation_error lk_usrs_hide" id="lk_usrs_fullNameValidationError">Обязательно заполнить</label>
+                            <input type="text" name="t02s1" id="t02s1" class="lk_usrs_inp">
+                        </div>
+                        <div>
+                            <label id="t02s2_lbl">Кол-во книг на странице каталога</label>
+                            <label class="lk_usrs_validation_error lk_usrs_hide" id="lk_usrs_pgn2ValidationError">Обязательно заполнить</label>
+                            <input type="text" name="t02s2" id="t02s2" class="lk_usrs_inp">
+                        </div>
+                        <div>
+                            <label id="t02s3_lbl">Слайдер hero</label>
+                            <label class="lk_usrs_validation_error lk_usrs_hide" id="lk_usrs_pgn3ValidationError">Обязательно заполнить</label>
+                            <input type="text" name="t02s3" id="t02s3" class="lk_usrs_inp">
+                        </div>
+                        <div  class="lk_usrs_form_action_buttons">
+                            <input type="submit" value="Сохранить" class="lk_usrs_btn">
+                        </div>
+                    </form>
+            </div>
+            <br/>
+            </main>
+        </div>
+        <div class="footer_wrap">
+        </div>
+    </div>
+    </div>
+    <script src="./js/s1.js"  defer> </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=10">
+    <!-- <link href="https://myfonts.ru/myfonts?fonts=golos-ui" rel="stylesheet" type="text/css" />
+    <link href="https://myfonts.ru/myfonts?fonts=doloman-pavljenko" rel="stylesheet" type="text/css" /> -->
+    <title>Elder books</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="bg1">
+        <div class="content_wrapper">
+            <div class="header">
+                <div class="header__logo">
+                    <img class="header__bookopen_img" src="./img/book_open.svg" alt="BookOpen">
+                    <span>BOOKSTORE</span>
+                </div>
+                <div class="header__right">
+                    <img class="header__user_img" src="./img/user1.svg" alt="user">
+                    <img class="header__fav_img" src="./img/book_mark.svg" alt="BookMark">
+                    <img class="header__cart_img" src="./img/cart1.svg" alt="Cart">
+                </div>
+            </div>
+            <div class="container clearfix">
+                <main class="content">
+                    <header class="hero">
+                        <div class="hero_left">
+                            <div class="hero_title">
+                                <h1 class="hero_title_h1">Какую книгу вы ищете?</h1>
+                                <img class="hero_title_img" src="./img/book_gif.png" alt="book">
+                            </div>
+                            <p class="hero_left_text1">Найдите книгу себе по
+                                душе </p>
+                            <div class="hero_search">
+                                <form class="hero_search_form" onsubmit="openCatalogSearch(event);return false;">
+                                    <div class="hero_search_wrap">
+                                        <input type="search" class="hero_search_inp"
+                                            placeholder="Введите название книги или ее автора...">
+                                        <button class="hero_search_btn" type="submit">
+                                            <img class="hero_explorer_btn_img" src="./img/search1.png" alt="search1">
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="hero_explorer">
+                                <div class="hero_explorer_btn_wrap">
+                                    <button class="hero_explorer_btn">Обзор</button>
+                                    <img class="hero_explorer_btn_img" src="./img/binoculars.png" alt="Binoculars">
+                                </div>
+                                <div class="hero_explorer_line"><span>&nbsp;</span></div>
+                            </div>
+                        </div>
+                        <div class="hero_right">
+                            <img class="hero_right_img" src='./img/banner_1.jpg'
+                                style="opacity: 1; filter: alpha(opacity=0);">
+                        </div>
+                    </header>
+                    <div class="cart_right_wrap">
+                        <div class="cart_right_page_off" id="id1">
+                            <div class="cart_right">
+                                <img class="cart_right_close_img" src="img/close.png" alt="close" onclick="closeLkm();">
+                                <div class="cart_right_h4_wrap">
+                                    <img src="./img/caret_left_cart.svg" class="cart_right_back_img" alt="back"
+                                        onclick="closeLkm();">
+                                    <h4 class="cart_right_h4">Ваша корзина</h4>
+                                </div>
+                                <div class="cart_right_products">
+                                    <div class="cart_right_product_wrap">
+                                    </div>
+                                    <div class="cart_right_product_itog">
+                                        <div class="cart_right_product_itog_wrap">
+                                            <span class="cart_right_itog_lbl">Итого:</span>
+                                            <span class="cart_right_itog_price">Р
+                                                60.00</span>
+                                        </div>
+                                        <div class="cart_right_itog_btn" onclick="openInThisTab('zkn.html');">Заказ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fav_right_wrap">
+                        <div class="fav_right_page_off" id="fav_right_page_off">
+                            <div class="fav_right">
+                                <img class="fav_right_close_img" src="img/close.png" alt="close" onclick="closeLkm();">
+                                <div class="fav_right_h4_wrap">
+                                    <img src="./img/caret_left_cart.svg" class="fav_right_back_img" alt="back"
+                                        onclick="closeLkm();">
+                                    <h4 class="fav_right_h4">Избранное</h4>
+                                </div>
+                                <div class="fav_right_products">
+                                    <div class="fav_right_product_wrap">
+                                    </div>
+                                    <div class="fav_right_product_itog">
+                                        <div class="fav_right_product_itog_wrap">
+                                            <span class="fav_right_itog_lbl">Итого:</span>
+                                            <span class="fav_right_itog_price">Р
+                                                60.00</span>
+                                        </div>
+                                        <div class="fav_right_itog_btn">
+                                            <img src="./img/cart2.svg" class="fav_right_cart_img" alt="cart"
+                                                onclick="favAllToCart();">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lgn_wrap">
+                        <div class="lgn_page_off" id="idlgn">
+                            <div class="lgn">
+                                <img class="lgn_close_img" src="img/close.png" alt="close">
+                                <div class="lgn_h4_wrap">
+                                    <img src="./img/book_open.svg" class="lgn_back_img" alt="back">
+                                    <h4 class="lgn_h4">Личный кабинет</h4>
+                                </div>
+                                <div class="lgn_controls">
+                                    <div class="lgn_inp_wrap">
+                                        <input type="text" class="lgn_inp" id="lgn_inp_name" placeholder="Логин">
+                                        <img class="lgn_inp_img" src="./img/user1.svg" alt="login"
+                                            onclick="putlogin(event);">
+                                    </div>
+                                    <div class="lgn_inp_wrap">
+                                        <input type="password" class="lgn_inp" id="lgn_inp_pass" placeholder="Пароль">
+                                        <img class="lgn_inp_img" src="./img/key.svg" alt="key"
+                                            onclick="putpass(event);">
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="saveLogin" name="saveLogin">
+                                        <label for="saveLogin">Сохранить</label>
+                                    </div>
+                                    <button class="lgn_btn_in" onclick="lgn();">Войти</button>
+                                    <button class="lgn_btn_reg" onclick="showRgn();">Регистрация</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rgn_page_off" id="idrgn">
+                            <div class="lgn">
+                                <img class="rgn_close_img" src="img/close.png" alt="close">
+                                <div class="lgn_h4_wrap">
+                                    <img src="./img/book_open.svg" class="rgn_back_img" alt="back">
+                                    <h4 class="lgn_h4">Личный кабинет</h4>
+                                </div>
+                                <div class="lgn_controls">
+                                    <div class="lgn_inp_wrap">
+                                        <input type="text" class="lgn_inp" id="rgn_inp_name" placeholder="Логин">
+                                        <img class="lgn_inp_img" src="./img/user1.svg" alt="login"
+                                            onclick="putlogin(event);">
+                                    </div>
+                                    <div class="lgn_inp_wrap">
+                                        <input type="email" class="lgn_inp" id="rgn_inp_email" placeholder="Емаил">
+                                        <img class="lgn_inp_img" style="visibility: hidden" src="./img/user1.svg"
+                                            alt="login">
+                                    </div>
+                                    <div class="lgn_inp_wrap">
+                                        <input type="password" class="lgn_inp" id="rgn_inp_pass" placeholder="Пароль">
+                                        <img class="lgn_inp_img" src="./img/key.svg" alt="key"
+                                            onclick="putpass(event);">
+                                    </div>
+                                    <div class="lgn_inp_wrap">
+                                        <input type="password" class="lgn_inp" id="rgn_inp_pass2"
+                                            placeholder="Пароль еще раз">
+                                        <img class="lgn_inp_img" style="visibility: hidden" src="./img/key.svg"
+                                            alt="key">
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" id="saveLogin2" name="saveLogin2">
+                                        <label for="saveLogin2">Сохранить</label>
+                                    </div>
+
+                                    <button class="lgn_btn_in" onclick="rgn();">Регистрация</button>
+                                    <button class="lgn_btn_reg" onclick="showLgn();">Вход</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lkm_page_off" id="idlkm">
+                            <div class="lgn">
+                                <img class="lkm_close_img" src="img/close.png" alt="close">
+                                <div class="lgn_h4_wrap">
+                                    <img src="./img/book_open.svg" class="lkm_back_img" alt="back">
+                                    <h4 class="lgn_h4">Личный кабинет</h4>
+                                </div>
+                                <div class="lgn_controls">
+                                    <p class="lkm_uname"></p>
+                                    <p class="lkm_users_lbl" onclick="openInThisTab('profile.html');">Профиль</p>
+                                    <p>Избранное</p>
+                                    <p>Корзина</p>
+                                    <p class="lkm_users_lbl" onclick="openInThisTab('users.html');">Пользователи</p>
+                                    <p class="lkm_users_lbl" onclick="openInThisTab('ctgs.html');">Категории</p>
+                                    <p class="lkm_users_lbl" onclick="openInThisTab('books.html');">Книги</p>
+                                    <p class="lkm_users_lbl" onclick="openInThisTab('sett.html');">Настройки</p>
+                                    <p class="lkm_users_lbl" onclick="openInThisTab('zks.html');">Заказы</p>
+                                    <button class="lgn_btn_in" onclick="lkmout();">Выход</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular">
+                        <h2 class="popular_h2">
+                            <span class="txt-rotate" data-period="2000"
+                                data-rotate='[ "ПОПУЛЯРНЫЕ КНИГИ", "КНИГИ ДЛЯ ДЕТЕЙ", "ЛУЧШИЕ УЧЕБНИКИ", "ЗАХВАТЫВАЮЩИЕ РОМАНЫ","ИЗВЕСТНЫЕ ПИСАТЕЛИ" ,"ЛЮБИМЫЕ ПОЭТЫ" ]'
+                                data-color='[ "saddlebrown", "#f9b806", "#F9784B", "#3AB8EB","saddlebrown" ,"#3AB8EB" ]'>
+                            </span>
+                        </h2>
+                        <div class="popular_cards">
+                            <img class="popular_ar" src="./img/caret_left.svg" alt="left">
+
+                            <div class="popular_card1">
+                                <img id="popular_img1" class="popular_cover" src="./img/popular/cb1_1.jpg"
+                                    alt="cover_book1" data-idb="1">
+                            </div>
+                            <div class="popular_card2">
+                                <img id="popular_img2" class="popular_cover" src="./img/popular/cb1_2.jpg"
+                                    alt="cover_book2" data-idb="2">
+                            </div>
+                            <div class="popular_card3">
+                                <img id="popular_img3" class="popular_cover" src="./img/popular/cb1_3.jpg"
+                                    alt="cover_book3" data-idb="3">
+                            </div>
+                            <div class="popular_card4">
+                                <img id="popular_img4" class="popular_cover" src="./img/popular/cb1_5.jpg"
+                                    alt="cover_book4" data-idb="5">
+                            </div>
+                            <img class="popular_ar" src="./img/caret_right.svg" alt="right">
+                        </div>
+                    </div>
+                    <div class="ctgs_menu_wrap">
+                        <div class="ctgs_right_wrap">
+                            <div class="ctgs_right_page_off" id="id1">
+                                <div class="ctgs_right">
+                                    <img class="ctgs_right_close_img" src="img/close.png" alt="close">
+                                    <div class="ctgs_right_h4_wrap">
+                                        <img src="./img/caret_left_cart.svg" class="ctgs_right_back_img" alt="back">
+                                        <h4 class="ctgs_right_h4">Выберите категорию</h4>
+                                    </div>
+                                    <div class="ctgs_right_products">
+                                        <div class="ctgs_right_product_wrap">
+                                            <select class="ctgs_menu_select" size="6" multiple
+                                                onchange="storeSelectedCtg(event);">
+                                                <option>Категория1</option>
+                                                <option>Категория2</option>
+                                                <option>Категория3</option>
+                                                <option>Категория4</option>
+                                            </select><br>
+                                            <div class="ctgs_right_menu_wrap">
+                                                <div class="ctgs_left_btn"><span>Весь Каталог</span></div>
+                                                <div class="ctgs_right_btn">
+                                                    Открыть
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ctgs">
+                            <div class="ctgs_title">
+                                <img src="./img/folder_no.svg" alt="folder">
+                                <h3 class="ctgs_h3">Категории</h3>
+                            </div>
+                            <div class="ctgs_btns">
+                                <div class="ctgs_btn1 ctgs_btn_b">Художественные</div>
+                                <div class="ctgs_btn2">Научно-популярные</div>
+                                <div class="ctgs_btn3">Детская</div>
+                                <div class="ctgs_btn4">Справочные</div>
+                                <div class="ctgs_btn5">Учебные</div>
+                                <div class="ctgs_btn6">Полиграфия</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ctl">
+                    </div>
+                </main>
+            </div>
+            <div class="footer_wrap">
+                <div class="footer_line">
+                    <span>&nbsp;</span>
+                </div>
+                <footer class="footer">
+                    <div class="footer_left">
+                        <img src="./img/book_open.svg" alt="book">
+                        <span>BOUQINIST</span>
+                    </div>
+                    <div class="footer_center">
+                        <div class="footer_social1">
+                            <img class="footer_social1_img" src="./img/telegram.svg" alt="telegram">
+                        </div>
+                        <div class="footer_social2">
+                            <img class="footer_social2_img" src="./img/git.svg" alt="git">
+                        </div>
+                        <div class="footer_social3">
+                            <img class="footer_social3_img" src="./img/email.svg" alt="email">
+                        </div>
+                    </div>
+                    <div class="footer_right">
+                        <span>by Bouqinist Team</span>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="./js/s1.js" defer> </script>
+</body>
+
+</html>

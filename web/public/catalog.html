@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=10">
+    <!-- <link href="https://myfonts.ru/myfonts?fonts=golos-ui" rel="stylesheet" type="text/css" />
+    <link href="https://myfonts.ru/myfonts?fonts=doloman-pavljenko" rel="stylesheet" type="text/css" /> -->
+    <title>Elder books</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="bg_catalog">
+    <div class="content_wrapper">
+
+        <div class="header">
+        </div>
+
+
+
+        <div class="container clearfix">
+            <main class="content">
+
+                <div class="cart_right_wrap">
+                </div>
+        
+                <div class="lgn_wrap">
+                </div>
+
+                <div class="fav_right_wrap">
+                </div>    
+
+                <div class="catalog_filter">
+                    <div class="catalog_filter_search_wrap">
+                        <div class="hero_search">
+                            <form class="hero_search_form" onsubmit="openCatalogSearch(event);return false;">
+                                <div class="hero_search_wrap">
+                                    <input type="search"
+                                        class="hero_search_inp"
+                                        placeholder="Введите название книги или ее автора...">
+                                    <button class="hero_search_btn" type="submit">
+                                        <img class="hero_explorer_btn_img"
+                                        src="./img/search1.png"
+                                        alt="search1">
+                                    </button>  
+                                </div>
+                            </form>
+                    </div>
+                    </div>
+                    <div class="catalog_filter_el">
+                        <p>Результаты "<span>Наименование книги или имя автора</span>"</p>
+                        <div class="catalog_filter_select_wrap">
+                            <div class="catalog_filter_select_categ">
+                                <select class="catalog_flt_select_categ">
+                                    <option value="">Категории:</option>
+                                    <option value="1">Литература</option>
+                                    <option value="2">Детские</option>
+                                    <option value="3">Школьные</option>
+                                </select>
+                            </div>
+                            <div class="catalog_filter_select_order">
+                                <select class="catalog_flt_select_order">
+                                    <option value="">Сортировать</option>
+                                    <option value="1">Название</option>
+                                    <option value="2">Автор</option>
+                                    <option value="3">Цена</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="catalog">
+                </div>
+
+                <div id="catalog_pgn" class="catalog_pgn">
+                    <p>1</p>
+                    <button id="catalog_pgn_btn_left" class="catalog_pgn_btn" onclick="openCatalogSearchBack(event);return false;">-</button>
+                    <input class="catalog_pgn_inp_page" type="text" name="pgnInp" id="pgnInp" value="1">   
+                    <button id="catalog_pgn_btn_right" class="catalog_pgn_btn" onclick="openCatalogSearchForw(event);return false;">+</button>
+                    <p id="catalog_pgn_max_page">1</p>
+                </div>
+
+                <div class="book_ctl">
+                    <div class="ctl_categ1">
+                        <div class="ctl_categ_title">
+                            <img src="./img/path.svg" alt="path">
+                            <span>Рекомендуем</span>
+                        </div>
+                    </div>
+                    <div class="div2">
+
+                        <div class="ctl_card">
+                            <div class="ctl_card_img_wrap">
+                                <img src="./img/catalog/k01/cb1_7.jpg" alt="cover_book1">
+                            </div>
+                            <div class="ctl_card_title">Название книги</div>
+                            <div class="ctl_card_price_wrap">
+                                <div class="ctl_card_price"><span>₽30.00</span></div>
+                                <div class="ctl_card_price_fav">
+                                    <img src="./img/book_mark_ctl.svg" alt="book_mark">
+                                </div>
+                            </div>
+                            <div class="ctl_card_cart">
+                                <img src="./img/cart2.svg" alt="cart_ctl">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="div3">
+
+                        <div class="ctl_card">
+                            <div class="ctl_card_img_wrap">
+                                <img src="./img/catalog/k01/cb1_8.jpg" alt="cover_book1">
+                            </div>
+                            <div class="ctl_card_title">Название книги</div>
+                            <div class="ctl_card_price_wrap">
+                                <div class="ctl_card_price"><span>₽30.00</span></div>
+                                <div class="ctl_card_price_fav">
+                                    <img src="./img/book_mark_ctl.svg" alt="book_mark">
+                                </div>
+                            </div>
+                            <div class="ctl_card_cart">
+                                <img src="./img/cart2.svg" alt="cart_ctl">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="div4">
+
+                        <div class="ctl_card">
+                            <div class="ctl_card_img_wrap">
+                                <img src="./img/catalog/k01/cb1_9.jpg" alt="cover_book1">
+                            </div>
+                            <div class="ctl_card_title">Название книги</div>
+                            <div class="ctl_card_price_wrap">
+                                <div class="ctl_card_price"><span>₽30.00</span></div>
+                                <div class="ctl_card_price_fav">
+                                    <img src="./img/book_mark_ctl.svg" alt="book_mark">
+                                </div>
+                            </div>
+                            <div class="ctl_card_cart">
+                                <img src="./img/cart2.svg" alt="cart_ctl">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="div5">
+                        <div class="ctl_card">
+                            <div class="ctl_card_img_wrap">
+                                <img src="./img/catalog/k01/cb1_10.jpg" alt="cover_book1">
+                            </div>
+                            <div class="ctl_card_title">Название книги</div>
+                            <div class="ctl_card_price_wrap">
+                                <div class="ctl_card_price"><span>₽30.00</span></div>
+                                <div class="ctl_card_price_fav">
+                                    <img src="./img/book_mark_ctl.svg" alt="book_mark">
+                                </div>
+                            </div>
+                            <div class="ctl_card_cart">
+                                <img src="./img/cart2.svg" alt="cart_ctl">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="div6">
+
+                        <div class="ctl_card">
+                            <div class="ctl_card_img_wrap">
+                                <img src="./img/catalog/k01/cb1_11.jpg" alt="cover_book1">
+                            </div>
+                            <div class="ctl_card_title">Название книги</div>
+                            <div class="ctl_card_price_wrap">
+                                <div class="ctl_card_price"><span>₽30.00</span></div>
+                                <div class="ctl_card_price_fav">
+                                    <img src="./img/book_mark_ctl.svg" alt="book_mark">
+                                </div>
+                            </div>
+                            <div class="ctl_card_cart">
+                                <img src="./img/cart2.svg" alt="cart_ctl">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+        </div>
+
+        <div class="footer_wrap">
+        </div>
+
+    </div>
+    </div>
+    <script src="./js/s1.js" defer> </script>
+</body>
+
+</html>
